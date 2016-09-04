@@ -1,0 +1,9 @@
+c:\users\midries\documents\visual studio 2015\Projects\TankControl\TankControl\bin\Debug\TankControl.exe.config
+c:\users\midries\documents\visual studio 2015\Projects\TankControl\TankControl\bin\Debug\TankControl.exe
+c:\users\midries\documents\visual studio 2015\Projects\TankControl\TankControl\bin\Debug\TankControl.pdb
+c:\users\midries\documents\visual studio 2015\Projects\TankControl\TankControl\obj\Debug\TankControl.csprojResolveAssemblyReference.cache
+c:\users\midries\documents\visual studio 2015\Projects\TankControl\TankControl\obj\Debug\TankControl.Form1.resources
+c:\users\midries\documents\visual studio 2015\Projects\TankControl\TankControl\obj\Debug\TankControl.Properties.Resources.resources
+c:\users\midries\documents\visual studio 2015\Projects\TankControl\TankControl\obj\Debug\TankControl.csproj.GenerateResource.Cache
+c:\users\midries\documents\visual studio 2015\Projects\TankControl\TankControl\obj\Debug\TankControl.exe
+c:\users\midries\documents\visual studio 2015\Projects\TankControl\TankControl\obj\Debug\TankControl.pdb
