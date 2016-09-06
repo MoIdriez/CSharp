@@ -36,6 +36,10 @@
             this.textResults = new System.Windows.Forms.TextBox();
             this.textMessage = new System.Windows.Forms.TextBox();
             this.buttonSend = new System.Windows.Forms.Button();
+            this.buttonUp = new System.Windows.Forms.Button();
+            this.buttonLeft = new System.Windows.Forms.Button();
+            this.buttonRight = new System.Windows.Forms.Button();
+            this.buttonStream = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textCom
@@ -87,7 +91,8 @@
             this.textResults.Location = new System.Drawing.Point(15, 76);
             this.textResults.Multiline = true;
             this.textResults.Name = "textResults";
-            this.textResults.Size = new System.Drawing.Size(287, 247);
+            this.textResults.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textResults.Size = new System.Drawing.Size(721, 247);
             this.textResults.TabIndex = 5;
             // 
             // textMessage
@@ -107,11 +112,58 @@
             this.buttonSend.UseVisualStyleBackColor = true;
             this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
             // 
+            // buttonUp
+            // 
+            this.buttonUp.Location = new System.Drawing.Point(636, 21);
+            this.buttonUp.Name = "buttonUp";
+            this.buttonUp.Size = new System.Drawing.Size(75, 23);
+            this.buttonUp.TabIndex = 8;
+            this.buttonUp.Text = "UP";
+            this.buttonUp.UseVisualStyleBackColor = true;
+            this.buttonUp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonUp_MouseDown);
+            this.buttonUp.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonUp_MouseUp);
+            // 
+            // buttonLeft
+            // 
+            this.buttonLeft.Location = new System.Drawing.Point(610, 46);
+            this.buttonLeft.Name = "buttonLeft";
+            this.buttonLeft.Size = new System.Drawing.Size(61, 23);
+            this.buttonLeft.TabIndex = 9;
+            this.buttonLeft.Text = "LEFT";
+            this.buttonLeft.UseVisualStyleBackColor = true;
+            this.buttonLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonLeft_MouseDown);
+            this.buttonLeft.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonLeft_MouseUp);
+            // 
+            // buttonRight
+            // 
+            this.buttonRight.Location = new System.Drawing.Point(677, 47);
+            this.buttonRight.Name = "buttonRight";
+            this.buttonRight.Size = new System.Drawing.Size(59, 23);
+            this.buttonRight.TabIndex = 10;
+            this.buttonRight.Text = "RIGHT";
+            this.buttonRight.UseVisualStyleBackColor = true;
+            this.buttonRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonRight_MouseDown);
+            this.buttonRight.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonRight_MouseUp);
+            // 
+            // buttonStream
+            // 
+            this.buttonStream.Location = new System.Drawing.Point(15, 329);
+            this.buttonStream.Name = "buttonStream";
+            this.buttonStream.Size = new System.Drawing.Size(721, 23);
+            this.buttonStream.TabIndex = 11;
+            this.buttonStream.Text = "Stream Data";
+            this.buttonStream.UseVisualStyleBackColor = true;
+            this.buttonStream.Click += new System.EventHandler(this.buttonStream_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 353);
+            this.ClientSize = new System.Drawing.Size(748, 353);
+            this.Controls.Add(this.buttonStream);
+            this.Controls.Add(this.buttonRight);
+            this.Controls.Add(this.buttonLeft);
+            this.Controls.Add(this.buttonUp);
             this.Controls.Add(this.buttonSend);
             this.Controls.Add(this.textMessage);
             this.Controls.Add(this.textResults);
@@ -138,6 +190,10 @@
         private System.Windows.Forms.TextBox textResults;
         private System.Windows.Forms.TextBox textMessage;
         private System.Windows.Forms.Button buttonSend;
+        private System.Windows.Forms.Button buttonUp;
+        private System.Windows.Forms.Button buttonLeft;
+        private System.Windows.Forms.Button buttonRight;
+        private System.Windows.Forms.Button buttonStream;
     }
 }
 

@@ -7,3 +7,5 @@ c:\users\midries\documents\visual studio 2015\Projects\TankControl\TankControl\o
 c:\users\midries\documents\visual studio 2015\Projects\TankControl\TankControl\obj\Debug\TankControl.csproj.GenerateResource.Cache
 c:\users\midries\documents\visual studio 2015\Projects\TankControl\TankControl\obj\Debug\TankControl.exe
 c:\users\midries\documents\visual studio 2015\Projects\TankControl\TankControl\obj\Debug\TankControl.pdb
+C:\Users\MIDRIES\Documents\Visual Studio 2015\Projects\TankControl\TankControl\bin\Debug\MatlabInterface.dll
+C:\Users\MIDRIES\Documents\Visual Studio 2015\Projects\TankControl\TankControl\bin\Debug\MatlabInterface.pdb

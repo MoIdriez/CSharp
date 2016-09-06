@@ -1,23 +1,32 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace TankControl.Data
+namespace TankControl
 {
     public class Sample
     {
         public Sample(string line)
         {
             var tokens = line.Split(',');
-            var data = Array.ConvertAll(tokens, double.Parse);
-            if (data.Length != 16)
-                throw new Exception("Sample creation failed. Incorrect amount of tokens");
+            var data = new List<double>();
+            try
+            {
+                data = Array.ConvertAll(tokens, double.Parse).ToList();
+            }
+            // this is mostly because of serial gyberish 
+            catch { }
 
+            if (data.Count != 18) return;
+
+            Line = line;
             Millis = data[0];
             Sonar = data[1];
-            Quaternion = new Quaternion(data[0], data[1], data[2], data[3]);
-            Euler = new Euler(data[4], data[5], data[6]);
-            YPR = new YPR(data[7], data[8], data[9]);
-            AccReal = new AccReal(data[10], data[11], data[12]);
-            AccWorld = new AccWorld(data[13], data[14], data[15]);
+            Quaternion = new Quaternion(data[2], data[3], data[4], data[5]);
+            Euler = new Euler(data[6], data[7], data[8]);
+            YPR = new YPR(data[9], data[10], data[11]);
+            AccReal = new AccReal(data[12], data[13], data[14]);
+            AccWorld = new AccWorld(data[15], data[16], data[17]);
         }
 
         public double Millis { get; }
@@ -27,8 +36,12 @@ namespace TankControl.Data
         public YPR YPR { get; }
         public AccReal AccReal { get; }
         public AccWorld AccWorld { get; }
-        
+        private string Line { get; }
 
+        public override string ToString()
+        {
+            return Line;
+        }
     }
 
     public class Quaternion

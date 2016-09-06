@@ -1,0 +1,5 @@
+C:\Users\MIDRIES\Documents\Visual Studio 2015\Projects\TankControl\MatlabInterface\bin\Debug\MatlabInterface.dll
+C:\Users\MIDRIES\Documents\Visual Studio 2015\Projects\TankControl\MatlabInterface\bin\Debug\MatlabInterface.pdb
+C:\Users\MIDRIES\Documents\Visual Studio 2015\Projects\TankControl\MatlabInterface\obj\Debug\MatlabInterface.csprojResolveAssemblyReference.cache
+C:\Users\MIDRIES\Documents\Visual Studio 2015\Projects\TankControl\MatlabInterface\obj\Debug\MatlabInterface.dll
+C:\Users\MIDRIES\Documents\Visual Studio 2015\Projects\TankControl\MatlabInterface\obj\Debug\MatlabInterface.pdb

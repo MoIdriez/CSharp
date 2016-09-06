@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.IO.Ports;
+using System.Linq.Expressions;
 using System.Threading;
 using System.Windows.Forms;
+using MatlabInterface;
 
 namespace TankControl
 {
@@ -9,22 +12,45 @@ namespace TankControl
     {
         private SerialPort _serialPort;
         private bool _isConnected;
+        private bool _isStreaming;
 
-        Thread _t;
-        readonly ManualResetEvent _runThread = new ManualResetEvent(false);
+        Thread _serialThread;
+        readonly ManualResetEvent _runSerialThread = new ManualResetEvent(false);
+
+        Thread _streamThread;
+        readonly ManualResetEvent _runStreamThread = new ManualResetEvent(false);
+
+        ConcurrentQueue<Sample> _samples = new ConcurrentQueue<Sample>();
 
         public Form1()
         {
             InitializeComponent();
         }
-        
+
+        private void buttonStream_Click(object sender, EventArgs e)
+        {
+            if (_isStreaming)
+            {
+                _runStreamThread.Reset();
+                buttonStream.Text = "Stream Data";
+                DisplayResults("Info: Stopped Streaming");
+            }
+            else
+            {
+                _runStreamThread.Set();
+                buttonStream.Text = "Streaming Data ...";
+                DisplayResults("Info: Streaming Data Succesfully");
+
+            }
+            _isStreaming = !_isStreaming;
+        }
 
         private void buttonConnect_Click(object sender, EventArgs e)
         {
             if (_isConnected)
             {
                 _serialPort.Close();
-                _runThread.Reset();
+                _runSerialThread.Reset();
                 buttonConnect.Text = "Connect";
                 DisplayResults("Info: Disconnected Succesfully");
             }
@@ -32,7 +58,7 @@ namespace TankControl
             {
                 _serialPort = new SerialPort(textCom.Text, Convert.ToInt32(textBaud.Text));
                 _serialPort.Open();
-                _runThread.Set();
+                _runSerialThread.Set();
                 DisplayResults("Info: Connected Succesfully");
                 buttonConnect.Text = "Disconnect";
             }
@@ -42,21 +68,36 @@ namespace TankControl
         private void buttonSend_Click(object sender, EventArgs e)
         {
             var message = textMessage.Text;
-            _serialPort.Write(message + '\n');
+            SendMessage(message);
             DisplayResults("Info: Send Message Succesfully");
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            _t = new Thread(ReceiveThread);
-            _t.Start();
+            _serialThread = new Thread(ReceiveThread);
+            _serialThread.Start();
+
+            _streamThread = new Thread(StreamThread);
+            _streamThread.Start();
+        }
+
+        private void SendMotorCommands(int leftMotor, int rightMotor)
+        {
+            var message = leftMotor + "-" + rightMotor;
+            SendMessage(message);
+        }
+
+        private void SendMessage(string message)
+        {
+            _serialPort.Write(message + '\n');
         }
 
         private void ReceiveThread()
         {
+            FileGenerator.Run();
             while (true)
             {
-                _runThread.WaitOne(Timeout.Infinite);
+                _runSerialThread.WaitOne(Timeout.Infinite);
 
                 while (true)
                 {
@@ -64,22 +105,50 @@ namespace TankControl
                     {
                         // receive data 
                         string msg = _serialPort.ReadLine();
-                        DisplayResults(msg);
+                        
+                        if (msg.StartsWith("Data:"))
+                        {
+                            var sample = new Sample(msg.Replace("Data:", ""));
+                            if (sample.Millis > 0)
+                            {
+                                _samples.Enqueue(sample);
+                                DisplayResults(sample.ToString());
+                            }
+                        }
                     }
-                    catch
+                    catch (Exception ex)
                     {
-                        DisplayResults("Failed");
-//                        try
-//                        {
-//                            this.Invoke(this.m_DelegateStopPerfmormClick, new Object[] { });
-//                        }
-//                        catch { }
-
-                        _runThread.Reset();
-
+                        DisplayResults(ex.ToString());
+                        _runSerialThread.Reset();
                         break;
                     }
 
+                }
+            }
+        }
+
+        private void StreamThread()
+        {
+            while (true)
+            {
+                _runStreamThread.WaitOne(Timeout.Infinite);
+                while (true)
+                {
+                    try
+                    {
+                        Sample sample;
+                        if (_samples.TryDequeue(out sample))
+                        {
+                            var sampleString = sample.ToString();
+                            FileGenerator.Data.Enqueue(sampleString);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        DisplayResults(ex.ToString());
+                        _runStreamThread.Reset();
+                        break;
+                    }
                 }
             }
         }
@@ -91,8 +160,37 @@ namespace TankControl
                 Invoke(new Action<string>(DisplayResults), value);
                 return;
             }
-            textResults.Text += value + Environment.NewLine;
+            textResults.AppendText(value + Environment.NewLine);
         }
 
+        private void buttonUp_MouseDown(object sender, MouseEventArgs e)
+        {
+            SendMotorCommands(150, 150);
+        }
+
+        private void buttonUp_MouseUp(object sender, MouseEventArgs e)
+        {
+            SendMotorCommands(0, 0);
+        }
+
+        private void buttonLeft_MouseDown(object sender, MouseEventArgs e)
+        {
+            SendMotorCommands(0, 150);
+        }
+
+        private void buttonLeft_MouseUp(object sender, MouseEventArgs e)
+        {
+            SendMotorCommands(0, 0);
+        }
+
+        private void buttonRight_MouseDown(object sender, MouseEventArgs e)
+        {
+            SendMotorCommands(150, 0);
+        }
+
+        private void buttonRight_MouseUp(object sender, MouseEventArgs e)
+        {
+            SendMotorCommands(0, 0);
+        }
     }
 }
