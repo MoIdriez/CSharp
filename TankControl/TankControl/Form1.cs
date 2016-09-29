@@ -20,6 +20,8 @@ namespace TankControl
         Thread _streamThread;
         readonly ManualResetEvent _runStreamThread = new ManualResetEvent(false);
 
+        private Thread _tcpThread;
+
         ConcurrentQueue<Sample> _samples = new ConcurrentQueue<Sample>();
 
         public Form1()
@@ -79,6 +81,9 @@ namespace TankControl
 
             _streamThread = new Thread(StreamThread);
             _streamThread.Start();
+
+            _tcpThread = new Thread(AsynchronousSocketListener.StartListening);
+            _tcpThread.Start();
         }
 
         private void SendMotorCommands(int leftMotor, int rightMotor)

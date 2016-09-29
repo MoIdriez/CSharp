@@ -3,3 +3,8 @@ C:\Users\MIDRIES\Documents\Visual Studio 2015\Projects\TankControl\MatlabInterfa
 C:\Users\MIDRIES\Documents\Visual Studio 2015\Projects\TankControl\MatlabInterface\obj\Debug\MatlabInterface.csprojResolveAssemblyReference.cache
 C:\Users\MIDRIES\Documents\Visual Studio 2015\Projects\TankControl\MatlabInterface\obj\Debug\MatlabInterface.dll
 C:\Users\MIDRIES\Documents\Visual Studio 2015\Projects\TankControl\MatlabInterface\obj\Debug\MatlabInterface.pdb
+B:\Git\CSharp\TankControl\MatlabInterface\bin\Debug\MatlabInterface.dll
+B:\Git\CSharp\TankControl\MatlabInterface\bin\Debug\MatlabInterface.pdb
+B:\Git\CSharp\TankControl\MatlabInterface\obj\Debug\MatlabInterface.csprojResolveAssemblyReference.cache
+B:\Git\CSharp\TankControl\MatlabInterface\obj\Debug\MatlabInterface.dll
+B:\Git\CSharp\TankControl\MatlabInterface\obj\Debug\MatlabInterface.pdb

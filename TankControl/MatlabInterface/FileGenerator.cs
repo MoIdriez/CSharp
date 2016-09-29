@@ -11,7 +11,7 @@ namespace MatlabInterface
         public static ManualResetEvent RunThread = new ManualResetEvent(false);
         public static ConcurrentQueue<string> Data = new ConcurrentQueue<string>();
 
-        private static string _directory = @"C:\Users\MIDRIES\Documents\Shared\";
+        private static string _directory = @"D:\Unorganized\Shared";
         private static string _prefix = "tank_";
         private static int _counter;
 

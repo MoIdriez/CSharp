@@ -9,3 +9,14 @@ c:\users\midries\documents\visual studio 2015\Projects\TankControl\TankControl\o
 c:\users\midries\documents\visual studio 2015\Projects\TankControl\TankControl\obj\Debug\TankControl.pdb
 C:\Users\MIDRIES\Documents\Visual Studio 2015\Projects\TankControl\TankControl\bin\Debug\MatlabInterface.dll
 C:\Users\MIDRIES\Documents\Visual Studio 2015\Projects\TankControl\TankControl\bin\Debug\MatlabInterface.pdb
+B:\Git\CSharp\TankControl\TankControl\bin\Debug\TankControl.exe.config
+B:\Git\CSharp\TankControl\TankControl\obj\Debug\TankControl.exe
+B:\Git\CSharp\TankControl\TankControl\obj\Debug\TankControl.pdb
+B:\Git\CSharp\TankControl\TankControl\bin\Debug\TankControl.exe
+B:\Git\CSharp\TankControl\TankControl\bin\Debug\TankControl.pdb
+B:\Git\CSharp\TankControl\TankControl\bin\Debug\MatlabInterface.dll
+B:\Git\CSharp\TankControl\TankControl\bin\Debug\MatlabInterface.pdb
+B:\Git\CSharp\TankControl\TankControl\obj\Debug\TankControl.csprojResolveAssemblyReference.cache
+B:\Git\CSharp\TankControl\TankControl\obj\Debug\TankControl.Form1.resources
+B:\Git\CSharp\TankControl\TankControl\obj\Debug\TankControl.Properties.Resources.resources
+B:\Git\CSharp\TankControl\TankControl\obj\Debug\TankControl.csproj.GenerateResource.Cache
