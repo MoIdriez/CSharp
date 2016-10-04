@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TankControl", "TankControl\TankControl.csproj", "{5CD74064-7785-4988-B740-A06F540D24FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatlabInterface", "MatlabInterface\MatlabInterface.csproj", "{E70CFF18-4A14-4EC8-A634-76A483A6D735}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleInterface", "..\ConsoleInterface\ConsoleInterface.csproj", "{A1E734F4-4AA0-4920-94D2-0DB5B92828C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "..\Engine\Engine.csproj", "{DE1EB975-0559-4962-BD78-7F733033B947}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{E70CFF18-4A14-4EC8-A634-76A483A6D735}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E70CFF18-4A14-4EC8-A634-76A483A6D735}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E70CFF18-4A14-4EC8-A634-76A483A6D735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E734F4-4AA0-4920-94D2-0DB5B92828C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E734F4-4AA0-4920-94D2-0DB5B92828C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E734F4-4AA0-4920-94D2-0DB5B92828C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E734F4-4AA0-4920-94D2-0DB5B92828C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE1EB975-0559-4962-BD78-7F733033B947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE1EB975-0559-4962-BD78-7F733033B947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE1EB975-0559-4962-BD78-7F733033B947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE1EB975-0559-4962-BD78-7F733033B947}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,8 @@
+B:\Git\CSharp\ConsoleInterface\bin\Debug\ConsoleInterface.exe.config
+B:\Git\CSharp\ConsoleInterface\bin\Debug\ConsoleInterface.exe
+B:\Git\CSharp\ConsoleInterface\bin\Debug\ConsoleInterface.pdb
+B:\Git\CSharp\ConsoleInterface\bin\Debug\Engine.dll
+B:\Git\CSharp\ConsoleInterface\bin\Debug\Engine.pdb
+B:\Git\CSharp\ConsoleInterface\obj\Debug\ConsoleInterface.csprojResolveAssemblyReference.cache
+B:\Git\CSharp\ConsoleInterface\obj\Debug\ConsoleInterface.exe
+B:\Git\CSharp\ConsoleInterface\obj\Debug\ConsoleInterface.pdb

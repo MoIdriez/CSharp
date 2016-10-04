@@ -1,0 +1,5 @@
+B:\Git\CSharp\Engine\bin\Debug\Engine.dll
+B:\Git\CSharp\Engine\bin\Debug\Engine.pdb
+B:\Git\CSharp\Engine\obj\Debug\Engine.csprojResolveAssemblyReference.cache
+B:\Git\CSharp\Engine\obj\Debug\Engine.dll
+B:\Git\CSharp\Engine\obj\Debug\Engine.pdb

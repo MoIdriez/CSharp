@@ -6,3 +6,8 @@ c:\users\midries\documents\visual studio 2015\Projects\MatlabClient\MatlabClient
 c:\users\midries\documents\visual studio 2015\Projects\MatlabClient\MatlabClient\obj\Debug\MatlabClient.csproj.ResolveComReference.cache
 c:\users\midries\documents\visual studio 2015\Projects\MatlabClient\MatlabClient\obj\Debug\MatlabClient.exe
 c:\users\midries\documents\visual studio 2015\Projects\MatlabClient\MatlabClient\obj\Debug\MatlabClient.pdb
+B:\Git\CSharp\MatlabClient\MatlabClient\bin\Debug\MatlabClient.exe.config
+B:\Git\CSharp\MatlabClient\MatlabClient\obj\Debug\Interop.MLApp.dll
+B:\Git\CSharp\MatlabClient\MatlabClient\obj\Debug\MatlabClient.csproj.ResolveComReference.cache
+B:\Git\CSharp\MatlabClient\MatlabClient\obj\Debug\MatlabClient.exe
+B:\Git\CSharp\MatlabClient\MatlabClient\obj\Debug\MatlabClient.pdb
