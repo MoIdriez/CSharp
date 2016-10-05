@@ -2,7 +2,6 @@
 using System.Net;
 using System.Text;
 using System.Net.Sockets;
-using System.Collections.Generic;
 
 namespace Engine.Matlab
 {
@@ -10,12 +9,14 @@ namespace Engine.Matlab
     {
         private bool _interrupt;
         private readonly TcpListener _server;
+        public ConcurrentQueue<string> Data;
         public ConcurrentQueue<string> Messages;
         
         public TcpServer(string ip, int port)
         {
             _server = new TcpListener(IPAddress.Parse(ip), port);
             Messages = new ConcurrentQueue<string>();
+            Data = new ConcurrentQueue<string>();
         }
 
         public void Run()
@@ -43,14 +44,26 @@ namespace Engine.Matlab
                         var data = Encoding.ASCII.GetString(bytes, 0, i);
                         Messages.Enqueue("Received: " + data);
 
-                        // Process the data sent by the client.
-                        data = data.ToUpper();
+                        string msg = string.Empty;
 
-                        byte[] msg = Encoding.ASCII.GetBytes(data);
+                        if (data.Contains("hello"))
+                        {
+                            msg = data;
+                        }
+                        else
+                        {
+                            string line;
+                            if (Data.TryDequeue(out line))
+                            {
+                                msg = line;
+                            }
+                        }
+
+                        byte[] sendBytes = Encoding.ASCII.GetBytes(msg);
 
                         // Send back a response.
-                        stream.Write(msg, 0, msg.Length);
-                        Messages.Enqueue("Sent: " + data);
+                        stream.Write(sendBytes, 0, sendBytes.Length);
+                        Messages.Enqueue("Sent: " + msg);
                     }
 
                     // Shutdown and end connection
