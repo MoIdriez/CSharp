@@ -10,7 +10,9 @@ namespace ConsoleInterface
     {
         static void Main(string[] args)
         {
-            new MatlabServer().Run();
+            //new MatlabServer().Run();
+            //new ControllerInterface().Run();
+            new ArduinoInterface().Run();
         }
     }
 }

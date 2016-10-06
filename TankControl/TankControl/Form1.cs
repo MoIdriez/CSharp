@@ -4,7 +4,7 @@ using System.IO.Ports;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Windows.Forms;
-using MatlabInterface;
+using Engine.Data;
 
 namespace TankControl
 {

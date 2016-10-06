@@ -6,3 +6,7 @@ B:\Git\CSharp\ConsoleInterface\bin\Debug\Engine.pdb
 B:\Git\CSharp\ConsoleInterface\obj\Debug\ConsoleInterface.csprojResolveAssemblyReference.cache
 B:\Git\CSharp\ConsoleInterface\obj\Debug\ConsoleInterface.exe
 B:\Git\CSharp\ConsoleInterface\obj\Debug\ConsoleInterface.pdb
+B:\Git\CSharp\ConsoleInterface\bin\Debug\SharpDX.XInput.dll
+B:\Git\CSharp\ConsoleInterface\bin\Debug\SharpDX.dll
+B:\Git\CSharp\ConsoleInterface\bin\Debug\SharpDX.XInput.xml
+B:\Git\CSharp\ConsoleInterface\bin\Debug\SharpDX.xml

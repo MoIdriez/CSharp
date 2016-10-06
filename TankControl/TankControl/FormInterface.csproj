@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sample.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,9 +80,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MatlabInterface\MatlabInterface.csproj">
-      <Project>{e70cff18-4a14-4ec8-a634-76a483a6d735}</Project>
-      <Name>MatlabInterface</Name>
+    <ProjectReference Include="..\..\Engine\Engine.csproj">
+      <Project>{de1eb975-0559-4962-bd78-7f733033b947}</Project>
+      <Name>Engine</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
