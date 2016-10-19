@@ -1,0 +1,6 @@
+B:\Git\CSharp\TankControl\WebService\bin\Debug\WebService.exe.config
+B:\Git\CSharp\TankControl\WebService\bin\Debug\WebService.exe
+B:\Git\CSharp\TankControl\WebService\bin\Debug\WebService.pdb
+B:\Git\CSharp\TankControl\WebService\obj\Debug\WebService.csprojResolveAssemblyReference.cache
+B:\Git\CSharp\TankControl\WebService\obj\Debug\WebService.exe
+B:\Git\CSharp\TankControl\WebService\obj\Debug\WebService.pdb

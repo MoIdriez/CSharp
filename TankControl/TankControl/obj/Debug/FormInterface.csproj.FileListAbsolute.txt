@@ -1,0 +1,7 @@
+B:\Git\CSharp\TankControl\TankControl\obj\Debug\FormInterface.csprojResolveAssemblyReference.cache
+B:\Git\CSharp\TankControl\TankControl\obj\Debug\TankControl.Form1.resources
+B:\Git\CSharp\TankControl\TankControl\obj\Debug\TankControl.Properties.Resources.resources
+B:\Git\CSharp\TankControl\TankControl\obj\Debug\FormInterface.csproj.GenerateResource.Cache
+B:\Git\CSharp\TankControl\TankControl\obj\Debug\TankControl.exe
+B:\Git\CSharp\TankControl\TankControl\obj\Debug\TankControl.pdb
+B:\Git\CSharp\TankControl\TankControl\bin\Debug\TankControl.exe.config

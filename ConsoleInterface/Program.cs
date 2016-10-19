@@ -12,7 +12,8 @@ namespace ConsoleInterface
         {
             //new MatlabServer().Run();
             //new ControllerInterface().Run();
-            new ArduinoInterface().Run();
+            //new ArduinoInterface().Run();
+            new WebServiceInterface().Run();
         }
     }
 }
